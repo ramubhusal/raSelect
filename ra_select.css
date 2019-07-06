@@ -1,0 +1,184 @@
+.ra-select {
+    background-color: #fff;
+    border: solid 1px #e8e8e8;
+    box-sizing: border-box;
+    clear: both;
+    display: block;
+    float: left;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    height: 34px;
+    line-height: 34px;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-top: 0px !important;
+    position: relative;
+    text-align: left !important;
+    -webkit-transition: all 0.02s ease-in-out;
+    transition: all 0.02s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: nowrap;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.ra-select:hover {
+    border-color: #dbdbdb;
+}
+
+.ra-select:active, .ra-select.open, .ra-select:focus {
+    border-color: #999; 
+}
+
+.ra-select:after {
+    border-bottom: 2px solid #999;
+    border-right: 2px solid #999;
+    content: '';
+    display: block;
+    height: 5px;
+    margin-top: -4px;
+    pointer-events: none;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    -webkit-transform-origin: 66% 66%;
+        -ms-transform-origin: 66% 66%;
+            transform-origin: 66% 66%;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    /*-webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;*/
+    width: 5px;
+}
+
+.ra-select.open:after {
+    -webkit-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+            transform: rotate(-135deg); 
+}
+
+.ra-select.open .list {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: scale(1) translateY(0);
+        -ms-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0); 
+}
+
+.ra-select.disabled {
+    border-color: #ededed;
+    color: #999;
+    pointer-events: none;
+}
+
+.ra-select.disabled:after {
+    border-color: #cccccc;
+}
+
+.ra-select.wide {
+    width: 100%;
+}
+
+.ra-select.wide .list {
+    left: 0 !important;
+    right: 0 !important;
+}
+
+.ra-select.right {
+    float: right;
+}
+
+.ra-select.right .list {
+    left: auto;
+    right: 0;
+}
+.ra-select.small {
+    font-size: 12px;
+    height: 36px;
+    line-height: 34px;
+}
+
+.ra-select.small:after {
+    height: 4px;
+    width: 4px;
+}
+
+.ra-select.small .option {
+    line-height: 34px;
+    min-height: 34px;
+}
+
+.ra-select .list {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+    box-sizing: border-box;
+    margin-top: 2px;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0px;
+    z-index: 999;
+}
+
+.ra-select .list:hover .option:not(:hover) {
+    background-color: transparent !important;
+}
+
+.ra-select .option {
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 32px;
+    list-style: none;
+    min-height: 32px;
+    min-width: 258px;
+    outline: none;
+    padding-left: 18px;
+    padding-right: 29px;
+    text-align: left;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.current {
+    width: 95%;
+    height: 24px;
+    position: absolute;
+    border-right: 1px solid #e0e3e8;
+    top: 6px;
+}
+
+.current:focus {
+    border: 0px solid red !important;
+    outline: none;
+}
+
+.ra-select .option:hover, .ra-select .option.focus, .ra-select .option.selected.focus {
+    background-color: #f6f6f6;
+}
+
+.ra-select .option.selected {
+    font-weight: bold;
+}
+
+.ra-select .option.disabled {
+    background-color: transparent;
+    color: #999;
+    cursor: default;
+}
+
+.no-csspointerevents .ra-select .list {
+    display: none;
+}
+
+.no-csspointerevents .ra-select.open .list {
+    display: block;
+}

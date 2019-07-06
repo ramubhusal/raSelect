@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RA-Select Demo</title>
+    <link rel="stylesheet" type="text/css" href="ra_select.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body onload="load()">
+<div class="row" style="margin:auto;">
+    <div class="col-md-6">
+        <label for="months">Month</label>
+        <select id="months" class="form-control">
+            <!-- <option value=""></option> -->
+            <option value="jan">January</option>
+            <option value="feb">February</option>
+            <option value="mar">March</option>
+            <option value="apr">April</option>
+            <option value="may">May</option>
+            <option value="jun">June</option>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label for="day">Days</label>
+        <select id="day" class="form-control">
+            <!-- <option value=""></option> -->
+            <option value="Sunday">Sunday</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+        </select>
+    </div>
+</div>
+
+
+</body>
+</html>
+<script src="ra_select.js"></script>
+<script type="text/javascript">
+    function load() {
+        $('select').raSelect();
+    }
+</script>
+
